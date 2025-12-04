@@ -1,4 +1,4 @@
-# 🧹 Cleanup Guide — Static Website (S3 + CloudFront + OAC)
+#  Cleanup Guide — Static Website (S3 + CloudFront + OAC)
 
 This document explains how to safely delete all AWS resources created for this project.  
 Cleaning up properly ensures you **avoid future charges**, especially from CloudFront and S3 storage.
@@ -7,7 +7,7 @@ Follow the steps **in this exact order** to avoid dependency errors.
 
 ---
 
-# ⚠️ IMPORTANT CLEANUP ORDER
+#  IMPORTANT CLEANUP ORDER
 
 CloudFront depends on the S3 bucket policy, so deleting the bucket first will cause errors.
 
