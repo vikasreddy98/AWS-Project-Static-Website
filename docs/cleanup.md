@@ -13,17 +13,17 @@ CloudFront depends on the S3 bucket policy, so deleting the bucket first will ca
 
 **Correct order:**
 
-1️⃣ Disable CloudFront distribution  
-2️⃣ Delete CloudFront distribution  
-3️⃣ Remove S3 bucket policy (OAC policy)  
-4️⃣ Delete objects and versions from S3  
-5️⃣ Delete S3 bucket  
-6️⃣ Verify OAC is deleted  
-7️⃣ Remove any IAM artifacts (if created)
+1 Disable CloudFront distribution  
+2 Delete CloudFront distribution  
+3 Remove S3 bucket policy (OAC policy)  
+4 Delete objects and versions from S3  
+5 Delete S3 bucket  
+6 Verify OAC is deleted  
+7 Remove any IAM artifacts (if created)
 
 ---
 
-# 1️⃣ Disable the CloudFront Distribution
+# 1️ Disable the CloudFront Distribution
 
 1. Go to **CloudFront → Distributions**
 2. Select your distribution
