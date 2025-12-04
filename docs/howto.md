@@ -103,9 +103,9 @@ This enforces “CloudFront-only” access to your content.
 
 ## Step 8 — Viewer Settings (Security)
 - **Viewer protocol policy:**  
-  ✔️ Redirect HTTP → HTTPS  
+   Redirect HTTP → HTTPS  
 - **Allowed HTTP methods:**  
-  ✔️ GET, HEAD
+   GET, HEAD
 
 ### Why this step?
 Only static GET requests are needed, reducing attack surface.  
@@ -116,7 +116,7 @@ All traffic is forced over HTTPS.
 ## Step 9 — Cache Settings
 - Cache policy: **CachingOptimized (recommended)**
 - Origin request policy: Default
-- Enable: ✔️ **Compress objects automatically**
+- Enable:  **Compress objects automatically**
 
 ### Why this step?
 Optimized caching + compression =  
@@ -129,7 +129,7 @@ Under **Distribution settings**:
 
 - **Default root object:** `index.html`
 
-![](images/phase2/cloudfront_default_root.png)
+![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/8a6e68d4bae93c29886cac4dc98a9379110d09cd/images/phase2/cloudfront_default_root.png)
 
 ### Why this step?
 Allows users to access the site without typing `/index.html`.
@@ -137,24 +137,20 @@ Allows users to access the site without typing `/index.html`.
 ---
 
 ## Step 11 — Price Class
-Choose:
-- Price Class 100 (cheapest)  
-or  
-- Price Class 200 (includes India, recommended for you)
+Choose: Free
 
 ---
 
 ## Step 12 — Create Distribution
 Click **Create distribution**.
 
-📸 **Screenshot Placeholder:**  
-`images/cloudfront-deploying.png`
+![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/dd49a358087d532d35110125704fdc82ad2a2343/images/phase2/cloudfront_deployed.png)
 
 Your distribution will take 5–10 minutes to deploy.
 
 ---
 
-# 📌 PHASE 2.5 — APPLY OAC BUCKET POLICY
+#  PHASE 2.5 — APPLY OAC BUCKET POLICY
 
 ## Step 13 — Copy the Recommended Bucket Policy
 1. CloudFront → Your Distribution → **Origins**
@@ -168,8 +164,7 @@ Your distribution will take 5–10 minutes to deploy.
 2. Paste the copied JSON
 3. Save
 
-📸 **Screenshot Placeholder:**  
-`images/s3-bucket-policy-oac.png`
+![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/dd49a358087d532d35110125704fdc82ad2a2343/images/phase2/s3_bucket_policy_oac.png)
 
 ### Why this step?
 This makes S3 **private to the world**, but **readable by CloudFront**.
@@ -178,8 +173,46 @@ It is the core of secure architecture.
 
 ---
 
-# 📌 PHASE 2.6 — VALIDATION TESTS
+#  PHASE 2.6 — VALIDATION TESTS
 
 ## Step 15 — Test CloudFront URL
 Copy your CloudFront domain:
+https://dxxxxxxxxxxxx.cloudfront.net
+Visit it in the browser → Your site should load securely.
+
+![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/dd49a358087d532d35110125704fdc82ad2a2343/images/phase2/cloudfront_site_working.png)
+
+---
+
+## Step 16 — Test That S3 Is Now Blocked
+Try:
+
+https://your-bucket.s3.amazonaws.com/index.html
+
+Expected result:  
+ **AccessDenied**
+
+![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/dd49a358087d532d35110125704fdc82ad2a2343/images/phase2/s3_access_denied.png)
+
+### Why this test matters?
+It proves:
+- OAC is working  
+- S3 is fully private  
+- CloudFront is the ONLY public entry point (best practice)
+
+---
+
+PHASE 2 COMPLETE  
+Your static website is now:
+
+- Secure  
+- Private at S3  
+-  Served globally via CloudFront  
+-  HTTPS enabled by default  
+-  Using correct AWS best practices  
+-  No domain required
+
+---
+
+
 
