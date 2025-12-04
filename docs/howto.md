@@ -17,8 +17,7 @@ No domain is required. The website will be served securely over HTTPS using Clou
    - **Block Public Access:** **UNCHECK** "Block all public access"
    - **Versioning:** Enable (optional, but recommended)
 
-<img src="images/phase1/s3_create_bucket.png" width="400">
-
+![Architecture Diagram](images/phase1/s3_create_bucket.png)
 ### Why this step?
 CloudFront needs to read objects from your bucket. The bucket remains private, but public access must be unblocked so CloudFront’s OAC can attach the correct policy later.
 
