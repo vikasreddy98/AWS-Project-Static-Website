@@ -12,7 +12,7 @@ PHASE 1 — S3 BUCKET SETUP (Website Origin)
 1. Go to AWS Console → **S3**
 2. Click **Create bucket**
 3. Configure the following:
-   - **Bucket name:** `project-a-static-site` (or any unique name)
+   - **Bucket name:** `static-website` (or any unique name)
    - **AWS Region:** your preferred region (e.g., `ap-south-1`)
    - **Block Public Access:** **UNCHECK** "Block all public access"
    - **Versioning:** Enable (optional, but recommended)
@@ -39,9 +39,7 @@ CloudFront needs to read objects from your bucket. The bucket remains private, b
    - Any assets (CSS, images, JS)
 3. Click **Upload**
 
-📸 **Screenshot Placeholder:**  
-`images/s3-upload-files.png`  
-*(Show index.html listed after upload)*
+![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/94244dde6ddb98fb0b55b9e1fdfc7e14e4f37328/images/phase1/s3_upload_files.png)
 
 ### Why this step?
 These uploaded files become the static content CloudFront will serve globally.
@@ -54,8 +52,7 @@ Go to **Permissions** tab and confirm:
 - Bucket Policy → *Empty*  
 - ACL → Do not modify anything
 
-📸 **Screenshot Placeholder:**  
-`images/s3-permissions-initial.png`
+![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/94244dde6ddb98fb0b55b9e1fdfc7e14e4f37328/images/phase1/s3_permissions_initial.png)
 
 ### Why this step?
 We want CloudFront to be the ONLY way to access the content.  
@@ -67,8 +64,7 @@ This makes the architecture secure and production-ready.
 Go to **Properties** → **Static Website Hosting**  
 Ensure it is **Disabled**.
 
-📸 **Screenshot Placeholder:**  
-`images/s3-static-hosting-disabled.png`
+![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/94244dde6ddb98fb0b55b9e1fdfc7e14e4f37328/images/phase1/s3_static_hosting_disabled.png)
 
 ### Why this step?
 Unlike older tutorials, modern best practices use CloudFront + OAC directly.  
@@ -76,12 +72,12 @@ We do **not** expose the S3 bucket as a public website.
 
 ---
 
-# ✅ PHASE 1 COMPLETE  
+# PHASE 1 COMPLETE  
 Your S3 bucket now securely stores your site content and is ready to be connected to CloudFront.
 
 ---
 
-# 📌 PHASE 2 — CLOUDFRONT DISTRIBUTION + OAC SETUP
+#  PHASE 2 — CLOUDFRONT DISTRIBUTION + OAC SETUP
 
 ## Step 6 — Create a New CloudFront Distribution
 1. Go to AWS Console → **CloudFront**
