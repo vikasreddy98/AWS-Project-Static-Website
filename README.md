@@ -72,7 +72,7 @@ To verify the deployment:
 
 Cleanup instructions are available in:
 
-👉 `docs/cleanup.md`
+![cleanup.md](docs/cleanup.md)
 
 ---
 
