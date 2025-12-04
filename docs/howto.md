@@ -177,7 +177,9 @@ It is the core of secure architecture.
 
 ## Step 15 — Test CloudFront URL
 Copy your CloudFront domain:
+
 https://dxxxxxxxxxxxx.cloudfront.net
+
 Visit it in the browser → Your site should load securely.
 
 ![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/dd49a358087d532d35110125704fdc82ad2a2343/images/phase2/cloudfront_site_working.png)
