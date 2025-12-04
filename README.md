@@ -35,6 +35,36 @@ AWS Services Used
 
 ---
 
+##  Project Structure
+
+```
+AWS-Project-Static-Website/
+├── docs/
+│   ├── cleanup.md
+│   └── howto.md
+│
+├── images/
+│   ├── phase1/
+│   │   ├── s3_create_bucket.png
+│   │   ├── s3_empty_bucket.png
+│   │   ├── s3_permissions_initial.png
+│   │   ├── s3_static_hosting_disabled.png
+│   │   └── s3_upload_files.png
+│   │
+│   └── phase2/
+│       ├── cloudfront_default_root.png
+│       ├── cloudfront_deployed.png
+│       ├── cloudfront_settings.png
+│       ├── cloudfront_site_working.png
+│       ├── s3_access_denied.png
+│       └── s3_bucket_policy_oac.png
+│
+├── site/
+│   └── index.html
+│
+├── Architecture.png
+└── README.md
+```
 
 ---
 
