@@ -28,8 +28,7 @@ CloudFront needs to read objects from your bucket. The bucket remains private, b
 1. Click the bucket name.
 2. Confirm it is empty.
 
-📸 **Screenshot Placeholder:**  
-`images/s3-empty-bucket.png`
+![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/995f53174720b5d1f8535f8417507761cc3c9605/images/phase1/s3_empty_bucket.png)
 
 ---
 
