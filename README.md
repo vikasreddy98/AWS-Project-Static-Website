@@ -1,2 +1,2 @@
-# AWS_Project_Static-Website
+# AWS-Project-Static-Website
 Secure Static Website Using S3 + CloudFront (No Domain Version)
