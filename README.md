@@ -42,7 +42,7 @@ AWS Services Used
 
 The detailed deployment instructions are in:
 
- ![](docs/howto.md)  
+ ![howto](docs/howto.md)  
 (Contains Phase 1 + Phase 2 with screenshots and full explanations)
 
 ---
