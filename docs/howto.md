@@ -90,11 +90,10 @@ Your S3 bucket now securely stores your site content and is ready to be connecte
 - **Origin access:**  
   Choose → **Origin access control settings (recommended)**
 - Click **Create new OAC**
-  - Name: `projectA-oac`
+  - Name: `project-static-site`
   - Save
 
-📸 **Screenshot Placeholder:**  
-`images/cloudfront-origin-settings.png`
+![](https://github.com/vikasreddy98/AWS-Project-Static-Website/blob/8a6e68d4bae93c29886cac4dc98a9379110d09cd/images/phase2/cloudfront_settings.png)
 
 ### Why this step?
 OAC allows CloudFront to securely access your private S3 bucket.  
@@ -108,9 +107,6 @@ This enforces “CloudFront-only” access to your content.
 - **Allowed HTTP methods:**  
   ✔️ GET, HEAD
 
-📸 **Screenshot Placeholder:**  
-`images/cloudfront-viewer-settings.png`
-
 ### Why this step?
 Only static GET requests are needed, reducing attack surface.  
 All traffic is forced over HTTPS.
@@ -121,9 +117,6 @@ All traffic is forced over HTTPS.
 - Cache policy: **CachingOptimized (recommended)**
 - Origin request policy: Default
 - Enable: ✔️ **Compress objects automatically**
-
-📸 **Screenshot Placeholder:**  
-`images/cloudfront-cache-settings.png`
 
 ### Why this step?
 Optimized caching + compression =  
@@ -136,8 +129,7 @@ Under **Distribution settings**:
 
 - **Default root object:** `index.html`
 
-📸 **Screenshot Placeholder:**  
-`images/cloudfront-default-root.png`
+![](images/phase2/cloudfront_default_root.png)
 
 ### Why this step?
 Allows users to access the site without typing `/index.html`.
