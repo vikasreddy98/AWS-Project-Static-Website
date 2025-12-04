@@ -23,3 +23,15 @@ Below is the high-level architecture representing the request flow:
 
 ![Architecture Diagram](Architecture.png)
 
+---
+
+AWS Services Used
+
+- **Amazon S3** — private static storage  
+- **Amazon CloudFront** — global CDN & HTTPS  
+- **Origin Access Control (OAC)** — secure S3 access  
+- **IAM** — bucket policies  
+- *(No custom domain, Route 53, or ACM required)*
+
+---
+
