@@ -1,4 +1,4 @@
-Secure Static Website on AWS (S3 + CloudFront + OAC)
+# Secure Static Website on AWS (S3 + CloudFront + OAC)
 
 This project demonstrates how to host a fully secure, globally cached static website using **Amazon S3** and **Amazon CloudFront** with **Origin Access Control (OAC)** — all without needing a custom domain.
 
